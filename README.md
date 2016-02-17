@@ -1,1 +1,2 @@
-# forgere.github.com
+# forgere.github.io
+博客
