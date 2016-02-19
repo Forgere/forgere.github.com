@@ -14,12 +14,21 @@
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: lant;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+}
+@font-face {
+    font-family: lant;
+    src: url('../font/fzlthjw-webfont.eot');
+    src: url('../font/fzlthjw-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/FZLTHJW.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
 }
 article,
 aside,
@@ -113,7 +122,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: lant;
   font-size: 1em;
 }
 button,
@@ -268,7 +277,7 @@ th {
   }
 }
 @font-face {
-  font-family: 'Glyphicons Halflings';
+  font-family: lant;
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
@@ -276,7 +285,7 @@ th {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
+  font-family: lant;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
@@ -1086,7 +1095,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Lato;
+  font-family: lant;
   font-size: 14px;
   line-height: 1.42857143;
   color: #ffffff;
@@ -1188,7 +1197,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: Lato;
+  font-family: lant;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1526,7 +1535,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: lant, Monaco, Consolas, "Courier New", monospace;
 }
 code {
   padding: 2px 4px;
@@ -5825,7 +5834,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Lato;
+  font-family: lant;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5932,7 +5941,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: Lato;
+  font-family: lant;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6189,7 +6198,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   line-height: 1;
-  font-family: serif;
+  font-family: lant;
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
