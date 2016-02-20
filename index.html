@@ -6,8 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/btcss.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+      $(function(){
+         $('.navbar a').click(function(){
+          $('li.active').removeClass('active');
+          $(this).parent().addClass('active');
+         })
+         $('.navbar a').anchorGoWhere({target:1});
+        })
+        $.fn.anchorGoWhere = function(options){
+                var obj = jQuery(this);
+                var defaults = {target:0, timer:500};
+                var o = jQuery.extend(defaults,options);
+                obj.each(function(i){
+                    jQuery(obj[i]).click(function(){
+                       var _rel = jQuery(this).attr("href").substr(1);
+                        switch(o.target){
+                           case 1: 
+                              var _targetTop = jQuery("#"+_rel).offset().top;
+                               jQuery("html,body").animate({scrollTop:_targetTop},o.timer);
+                               break;
+                           case 2:
+                               var _targetLeft = jQuery("#"+_rel).offset().left;
+                               jQuery("html,body").animate({scrollLeft:_targetLeft},o.timer);
+                               break;
+                       }
+                       return false;
+                   });                  
+               });
+           };
+    </script>
   </head><body>
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -18,54 +47,43 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span>张伟的简历</span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
             <li class="active">
-              <a href="bt.html">主页</a>
+              <a href="#page1">主页</a>
             </li>
             <li>
-              <a href="#">关于我</a>
+              <a href="#page2">关于我</a>
             </li>
             <li>
-              <a href="#">IT技能</a>
+              <a href="#page3">IT技能</a>
             </li>
             <li>
-              <a href="#">我的经历</a>
+              <a href="#page4">我的经历</a>
             </li>
             <li>
-              <a href="#">我的作品</a>
+              <a href="#page5">我的作品</a>
             </li>
             <li>
-              <a href="#">联系我</a>
+              <a href="#page6">联系我</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="page1">
       <div class="container">
         <div class="row">
-          <div class="col-xs-4 col-sm-4 col-lg-4 col-md-4 col-xs-offset-4 col-sm-offset-4 col-lg-offset-4 col-md-offset-4">
-            <img src="images/QQ20160218-1@2x.png" class="center-block img-circle img-responsive">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h2>一切不能杀死我的
+                <span>都会使我更强</span>
+              </h2>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 hidden-xs">
-        <div class="text-center">
-          <h2>一切不能杀死我的，都会使我更强</h2>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="col-md-6 col-md-offset-3">
-          <hr>
-        </div>
-        <div class="row text-center">
+        <div class="row">
           <div class="col-md-12">
             <p class="text-center">我叫张伟,
               <br>24岁,
@@ -73,38 +91,39 @@
               <br>573596314@qq.com</p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="section active">
-      <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="page-header">
-              <h2>关于我</h2>
+          <div class="col-xs-4 col-xs-offset-4">
+            <div class="row">
+              <div class="col-xs-4 col-xs-offset-4">
+                <hr>
+              </div>              
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="section active" id="page2">
+      <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-offset-3 col-xs-3 text-center">
-            <img src="images/iconfont-xuelirenzheng (1).png" class="img-responsive img-thumbnail">
-            <h3 class="text-center">本科</h3>
+          <div class="col-sm-2 col-sm-offset-2 col-xs-3 col-xs-offset-1 text-center">
+            <img src="images/xueli.png" height="141" width="138" class="img-responsive img-thumbnail">
+            <h3 class="text-center">
+              <span class="hidden-sm hidden-xs">学历&nbsp;&nbsp;</span>本科</h3>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-3 text-center">
-            <img src="images/iconfont-nianling.png" class="img-responsive img-thumbnail">
-            <h3 class="text-center">24岁</h3>
+          <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
+            <img src="images/zuobiao.png" height="141" width="138" class="img-responsive img-thumbnail">
+            <h3 class="text-center">
+              <span class="hidden-sm hidden-xs">坐标&nbsp;&nbsp;</span>上海</h3>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-3 col-xs-offset-3 text-center">
-            <img src="images/iconfont-coordinate.png" class="img-responsive img-thumbnail">
-            <h3>上海</h3>
-          </div>
-          <div class="col-md-3 col-sm-6 col-xs-3 text-center">
-            <img src="images/iconfont-zhuangtai.png" class="img-responsive img-thumbnail">
-            <h3 class="text-center">状态</h3>
+          <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
+            <img src="images/state.png" height="141" width="138" class="img-responsive img-thumbnail">
+            <h3 class="text-center">
+              <span class="hidden-sm hidden-xs">状态&nbsp;&nbsp;</span>求职</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row rowm">
           <div class="col-md-6 col-md-offset-3 col-sm-7 col-sm-offset-2">
-            <ul class="text-left">
+            <ul class="list-unstyled text-center">
               <li>2014年毕业于江南大学机械设计专业，曾任职生产管理</li>
               <li>接触到前端后便一发不可收拾，在工作之余学习前端技术</li>
               <li>对于响应良好，页面精美，效果炫目的网页顶礼膜拜</li>
@@ -113,55 +132,93 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="page3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 page-header">
-            <h2 class="text-center">IT技能</h2>
+          <div class="col-md-12">
+            <h2 class="text-center">IT
+              <span>技能</span>
+              <br>
+              <small>·&nbsp;&nbsp;INFORMATION TECHNOLOGY SKILLS&nbsp;&nbsp;·</small>
+            </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <img src="images/seo.png" class="hidden-sm hidden-xs img-thumbnail">
-            <h3>SEO</h3>
-            <ul class="text-left">
-              <li>了解搜索引擎爬虫的行为准则</li>
-              <li>了解如何在网站内部进行seo，如网页结构，内容，界面</li>
-              <li>熟悉在前端代码结构中运用seo，例如扁平化结构，语意化标签，精简代码</li>
-            </ul>
+        <div class="row tpad">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="row pbot1">
+                  <div class="col-md-3 col-sm-3 text-right">
+                    <img src="images/seo.png" class="hidden-xs img-thumbnail">
+                  </div>
+                  <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                    <ul class="text-left">
+                      <li>了解搜索引擎爬虫的行为准则</li>
+                      <li>了解如何在网站内部进行seo，如网页结构，内容，界面</li>
+                      <li>熟悉在前端代码结构中运用seo，例如扁平化结构，语意化标签，精简代码</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                <div class="row pbot2">
+              <div class="col-md-3 col-sm-3 text-right">
+                <img src="images/html.png" class="hidden-xs img-responsive img-thumbnail">
+              </div>
+              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                <ul class="text-left">
+                  <li>深刻理解网页结构，样式，表现分离</li>
+                  <li>熟练运用html标签，使用语意化的标签</li>
+                  <li>了解html5新特性svg,localStorage</li>
+                  <li>谨记渐进增强，平稳退化</li>
+                </ul>
+              </div>
+            </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3 text-center">
-            <img src="images/html.png" class="hidden-sm hidden-xs img-responsive img-thumbnail">
-            <h3>HTML</h3>
-            <ul class="text-left">
-              <li>深刻理解网页结构，样式，表现分离</li>
-              <li>熟练运用html标签，使用语意化的标签</li>
-              <li>了解html5新特性svg，localStorage</li>
-            </ul>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
+            <div class="row pbot3">
+              <div class="col-md-3 col-sm-3 text-right">
+                <img src="images/css.png" class="hidden-xs img-responsive img-thumbnail">
+              </div>
+              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                <ul class="text-left">
+                  <li>熟练运用css及css3新属性</li>
+                  <li>了解浏览器兼容性，了解常见的css hack</li>
+                  <li>熟悉mac/os系统</li>
+                  <li>熟悉Bootstrap框架</li>
+                </ul>
+              </div>
+            </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
+              <div class="row pbot4">
+              <div class="col-md-3 col-sm-3 text-right">
+                <img src="images/js.png" class="hidden-xs img-responsive img-thumbnail">
+              </div>
+              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                <ul class="styled text-left">
+                  <li>熟悉jquery库</li>
+                  <li>注重原生js学习，了解闭包</li>
+                  <li>了解ajax运作原理json数据结构</li>
+                </ul>
+              </div>
+            </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-3 text-center">
-            <img src="images/css.png" class="hidden-sm hidden-xs img-responsive img-thumbnail">
-            <h3>CSS</h3>
-            <ul class="text-left">
-              <li>熟练运用css及css3新属性</li>
-              <li>注重浏览器兼容性，熟悉常见的css hack</li>
-              <li>熟悉mac/os系统</li>
-              <li>熟悉Bootstrap框架</li>
-            </ul>
-          </div>
-          <div class="col-md-3 text-center">
-            <img src="images/js.png" class="hidden-sm hidden-xs img-responsive img-thumbnail">
-            <h3>JS</h3>
-            <ul class="styled text-left">
-              <li>掌握jquery库</li>
-              <li>注重原生js学习，了解闭包</li>
-              <li>了解ajax运作原理以及json数据结构</li>
-            </ul>
-          </div>
+        </div>
+        
         </div>
       </div>
-    </div>
-    <div class="section">
+    <div class="section" id="page4">
       <div class="container">
         <div class="row">
           <div class="col-md-12 page-header text-center">
@@ -219,7 +276,7 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" id="page5">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -245,7 +302,7 @@
         </div>
       </div>
     </div>
-    <div class="section text-center col-md-12">
+    <div class="section text-center col-md-12" id="page6">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
