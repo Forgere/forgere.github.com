@@ -4,8 +4,8 @@
         <title>个人简历</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content="yes" name="apple-mobile-web-app-capable" />
-        <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
         <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -26,6 +26,23 @@
                   $("#carousel-example ol li:nth-child(3)").click(function(){
                    $("#carousel-example").carousel(2);
                 });
+                  var tt = $('.carousel-inner .active').height();
+                  $('.carousel-inner .item').css({height:tt});
+                  // page4高度
+                  // page3高度
+                   var h_max = 0;
+                     //求最大高度
+                     $(".pbot").each(function() {
+                          var h = $(this).innerHeight();
+                          h_max = h > h_max ? h : h_max;
+                     })
+                       //将class的高度赋值为最大高度，
+                       //最大高度innerheight=padding+内容高度height
+                     $(".pbot").each(function() {
+                            //求padding的值
+                           var h_pad = $(this).innerHeight() - $(this).height();
+                           $(this).height(h_max - h_pad);
+                     })
                 })
                 $.fn.anchorGoWhere = function(options){
                         var obj = jQuery(this);
@@ -49,8 +66,7 @@
                        });
                    };
         </script>
-    </head>
-      <body>
+    </head><body>
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -160,7 +176,7 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-                                <div class="row pbot1">
+                                <div class="row pbot">
                                     <div class="col-sm-3 text-right">
                                         <img src="images/seo.png" class="hidden-xs img-thumbnail">
                                     </div>
@@ -176,7 +192,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-                                <div class="row pbot2">
+                                <div class="row pbot">
                                     <div class="col-sm-3 text-right">
                                         <img src="images/html.png" class="hidden-xs img-responsive img-thumbnail">
                                     </div>
@@ -195,7 +211,7 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
-                                <div class="row pbot3">
+                                <div class="row pbot">
                                     <div class="col-sm-3 text-right">
                                         <img src="images/css.png" class="hidden-xs img-responsive img-thumbnail">
                                     </div>
@@ -212,7 +228,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
-                                <div class="row pbot4">
+                                <div class="row pbot">
                                     <div class="col-md-3 col-sm-3 text-right">
                                         <img src="images/js.png" class="hidden-xs img-responsive img-thumbnail">
                                     </div>
@@ -234,31 +250,30 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h2>我的<span>经历</span>
+                        <h2>我的
+                            <span>经历</span>
                             <br>
                             <small>·&nbsp;&nbsp;MY EXPERIENCE&nbsp;&nbsp;·</small>
                         </h2>
                     </div>
                 </div>
                 <div id="carousel-example" data-interval="false" class="carousel slide height" data-ride="carousel">
-                     <ol class="carousel-indicators hidden-xs hidden-sm">
+                    <ol class="carousel-indicators hidden-xs hidden-sm">
                         <li data-target="carousel-example" data-slide-to="0" class="active"></li>
                         <li data-target="carousel-example" data-slide-to="1"></li>
                         <li data-target="carousel-example" data-slide-to="2"></li>
-                     </ol> 
+                    </ol>
                     <div class="carousel-inner">
-                        <div class="item height active">
+                        <div class="item height">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="row">
-                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
-                                            <img src="images/ex3.png">
+                                        <div class="col-xs-3 col-xs-offset-1 hidden-xs">
+                                            <img src="images/ex3.png" class="img-thumbnail">
                                         </div>
-                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
-                                            <h3 class="text-left">前端之路
-                                                <small>2015年11月～至今</small>
-                                            </h3>
-                                            <ul class="col-md-8 list-unstyled text-left">
+                                        <div class="col-xs-7 col-xs-offset-1 text-left">
+                                            <h3 class="text-left">前端之路<small>2015年11月～至今</small></h3>
+                                            <ul class="col-sm-10 col-xs-9 col-xs-offset-3 col-sm-offset-0 list-unstyled text-left">
                                                 <li>工作之余开始系统的学习前端</li>
                                                 <li>结合网络教程以及前端书籍，基础与实战相结合</li>
                                                 <li>渐渐认识到前端的广度及深度，辞职在家专心自学</li>
@@ -272,17 +287,15 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="row">
-                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
-                                            <img src="images/ex2.png">
+                                        <div class="col-xs-3 col-xs-offset-1 hidden-xs">
+                                            <img src="images/ex2.png" class="img-thumbnail">
                                         </div>
-                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
-                                            <h3 class="text-left">工作经历
-                                            <small>2014年6月～2016年1月</small>
-                                            </h3>
-                                            <ul class="col-md-8 list-unstyled text-left">
-                                                <li>中荣印刷（昆山）有限公司 担任主任助理</li>
-                                                <li>负责生产部门的精细化管理，质量改进项目</li>
-                                                <li>质量改进方案的实施后，问题得到根除，得到领导和客户的一致好评</li>
+                                        <div class="col-xs-7 col-xs-offset-1 text-left">
+                                            <h3 class="text-left">工作经历<small>2014年6月～2016年1月</small></h3>
+                                            <ul class="col-sm-10 col-xs-9 col-xs-offset-3 col-sm-offset-0 list-unstyled text-left">
+                                                <li>中荣印刷 担任主任助理</li>
+                                                <li>负责精细化管理，质量改进项目</li>
+                                                <li>质量改进方案的实施后，得到领导和客户一致好评</li>
                                                 <li>开始接触前端，为之着迷</li>
                                             </ul>
                                         </div>
@@ -290,18 +303,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item active">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="row">
-                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
-                                            <img src="images/ex1.png">
+                                        <div class="col-xs-3 col-xs-offset-1 hidden-xs">
+                                            <img src="images/ex1.png" class="img-thumbnail">
                                         </div>
-                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
-                                            <h3>学习经历
-                                            <small>2010年9月～2014年6月</small>
-                                            </h3>
-                                            <ul class="col-md-8 list-unstyled text-left">
+                                        <div class="col-xs-7 col-xs-offset-1 text-left">
+                                            <h3>学习经历<small>2010年9月～2014年6月</small></h3>
+                                            <ul class="col-sm-10 col-xs-9 col-xs-offset-3 col-sm-offset-0 list-unstyled text-left">
                                                 <li>江南大学 机械设计专业</li>
                                                 <li>获得CAD中级证书</li>
                                                 <li>获得CET-4级证书</li>
@@ -322,7 +333,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="text-center">我的<span>作品</span><br/><small>·&nbsp;&nbsp;MY FRONT END WORKS&nbsp;&nbsp;·</small></h2>
+                        <h2 class="text-center">我的
+                            <span>作品</span>
+                            <br>
+                            <small>·&nbsp;&nbsp;MY FRONT END WORKS&nbsp;&nbsp;·</small>
+                        </h2>
                     </div>
                 </div>
                 <div class="row">
@@ -357,48 +372,51 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="text-center"><span>联系</span>我<br/><small>·&nbsp;&nbsp;CONTACT ME KOWN MORE&nbsp;&nbsp;·</small></h2>
+                        <h2 class="text-center">
+                            <span>联系</span>我
+                            <br>
+                            <small>·&nbsp;&nbsp;CONTACT ME KOWN MORE&nbsp;&nbsp;·</small>
+                        </h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
                         <div class="row">
-                          <div class="col-xs-10 col-xs-offset-1">
-                            <div class="row">
-                               <div class="col-md-2 col-md-offset-1 col-xs-3 col-xs-offset-2 text-center">
-                                <a href="#"><img src="images/foot_03.png" class="img-responsive img-thumbnail"></a>
-                                <p class="text-center">18913247044</p>
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <div class="row">
+                                    <div class="col-md-2 col-md-offset-1 col-xs-3 col-xs-offset-2 text-center">
+                                        <a href="#"><img src="images/foot_03.png" class="img-responsive img-thumbnail"></a>
+                                        <p class="text-center">18913247044</p>
+                                    </div>
+                                    <div class="col-md-2  col-md-offset-0 col-xs-3 col-xs-offset-2">
+                                        <a target="_blank" href="mailto:573596314@qq.com"><img src="images/foot_05.png" class="img-responsive img-thumbnail"></a>
+                                        <p>573596314@qq.com</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-4">
+                                        <a target="_blank" href="http://www.cnblogs.com/forgere/"><img src="images/foot_07.png" class="img-responsive img-thumbnail"></a>
+                                        <p class="text-center">博客</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-4">
+                                        <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=f8e8c98f52d19a9f911785e1ae6f90e627afb11db7fcbfde"><img src="images/foot_11.png" class="img-responsive img-thumbnail"></a>
+                                        <p class="text-center">QQ</p>
+                                    </div>
+                                    <div class="col-md-2 col-xs-4">
+                                        <a target="_blank" href="https://github.com/Forgere"><img src="images/foot_09.png" class="img-responsive img-thumbnail"></a>
+                                        <p class="text-center">Github</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-2  col-md-offset-0 col-xs-3 col-xs-offset-2">
-                                <a target="_blank" href="mailto:573596314@qq.com"><img src="images/foot_05.png" class="img-responsive img-thumbnail"></a>
-                                <p>573596314@qq.com</p>
-                            </div>
-                            <div class="col-md-2 col-xs-4">
-                                <a target="_blank" href="http://www.cnblogs.com/forgere/"><img src="images/foot_07.png" class="img-responsive img-thumbnail"></a>
-                                <p class="text-center">博客</p>
-                            </div>
-                            <div class="col-md-2 col-xs-4">
-                                <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=f8e8c98f52d19a9f911785e1ae6f90e627afb11db7fcbfde"><img src="images/foot_11.png" class="img-responsive img-thumbnail"></a>
-                                <p class="text-center">QQ</p>
-                            </div>
-                            <div class="col-md-2 col-xs-4">
-                                <a target="_blank" href="https://github.com/Forgere"><img src="images/foot_09.png" class="img-responsive img-thumbnail"></a>
-                                <p class="text-center">Github</p>
-                            </div>
-                            </div>
-                          </div>
                         </div>
                         <div class="row xuanyan">
-                          <div class="col-md-12">
-                            <p>前端的路才刚刚开始。愿往来有良师，谈笑有“志”友
-                            <br>重要的事情说三遍：写，写，写</p>
-                          </div>
+                            <div class="col-md-12">
+                                <p>前端的路才刚刚开始。愿往来有良师，谈笑有“志”友
+                                    <br>重要的事情说三遍：写，写，写</p>
+                            </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-  
+    
 
 </body></html>

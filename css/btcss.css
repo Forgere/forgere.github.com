@@ -6171,13 +6171,14 @@ button.close {
 .carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
   position: absolute;
-  top: 50%;
+  top: 36%;
   z-index: 5;
   display: inline-block;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
-  left: 0%;
+  left: 5%;
+  top:36%;
   margin-left: -10px;
 }
 .carousel-control .icon-next,
@@ -6194,7 +6195,7 @@ button.close {
   font-family: lant serif;
 }
 .carousel-control .icon-prev:before {
-  content: '〈 ';
+  content: '〈';
 }
 .carousel-control .icon-next:before {
   content: '〉';
@@ -6203,6 +6204,7 @@ button.close {
   position: absolute;
   bottom: 10px;
   left: 50%;
+  top:100%;
   z-index: 15;
   width: 60%;
   margin-left: -30%;
@@ -6826,34 +6828,33 @@ h2 span{
 #page3 ul{
   line-height: 2.2em;
   color: #33333f;
-  font-size: 14px;
+  font-size: 16px;
 }
 #page3 .col-md-10:hover{
   box-shadow: 8px 8px 5px #a10b21;
 }
 #page3 .col-md-10{
   background-color: #dad9dd;
+  padding: 5% 0;
 }
 #page3 .tpad{
   margin-top: 3%;
 }
-#page3 .row .row{
-  margin-top: 7.6%;
-}
 #page3 .row .row div{
-  margin-left:0;
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
 }
-.pbot3,.pbot4{
-  padding-bottom:31px; 
+#page3 .col-md-9{
+  margin-left: 40px;
 }
 #page4{
   background: #f8f7f8;
   color:#33333f;
   padding:5% 0;
 }
+#page4 i{font-style: normal;}
+
 #page4 h3{
   font-size: 28px;
   border-left: 7px solid #a10b21;
@@ -6868,7 +6869,7 @@ h2 span{
   margin-top: 10px;
 }
 #page4 .col-xs-12{
-  padding: 9% 0;
+  margin: 9% 0;
 }
 #page5{
   background: #22212e;
@@ -6887,33 +6888,37 @@ h2 span{
 #page6 .xuanyan{
   background: #22212e;
   padding: 2.47% 0;
+  margin-top: 7%;
+}
+#page6 .container .col-xs-12{
+  margin: 7% 0;
 }
 
 
 
 
-@media screen and (min-width: 992px){
-#page4 .carousel-inner .item:nth-child(1),#page4 .carousel-inner .item:nth-child(3){
-  padding-bottom: 3.6924%;
-}
-}
-@media screen and (max-width:992px){
-  #page3 .row .row{
-  margin-top: 5px;
-  margin-left: 12%;
-}
+
+@media screen and (max-width:1024px){
   #page2 .container .lmar{
     margin-right: 4%;
   }
-  #page4 .col-sm-offset-0{
-    padding-left: 5%;
-  }
-  #page4 .carousel-inner{
-  height: 46%;
+  #page4 h3{text-align: center;}
+  #page3 .row .row{
+  margin-top: 3%;
 }
 }
 @media screen and (max-width: 1000px){
   body{
     overflow: hidden;
   }
+}
+@media screen and (min-width:1024px){
+#page3 .row .row{
+  margin-top: 7.6%;
+}
+}
+@media screen and (min-width: 768px){
+  #page3 .col-md-9{
+  margin-left: -24px;
+}
 }
