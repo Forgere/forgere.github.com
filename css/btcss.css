@@ -1085,7 +1085,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Lato;
+  font-family: lant;
   font-size: 14px;
   line-height: 1.42857143;
   color: #ffffff;
@@ -4215,7 +4215,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: 7.5px -15px;
 }
 .navbar-nav > li > a {
-  padding: 0 40px;
+  padding: 0 20px;
   line-height: 32px;
   font-size: 20px;
 }
@@ -4442,6 +4442,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #ffffff;
     font-size: 26px;
+  }
+  ul li{
+    line-height: 28px;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -6884,11 +6887,11 @@ h2 span{
 /*   margin: 0 0%; */
   padding: 2.47% 0;
 }
-#page6 .col-md-12>.row:first-child{
+/*#page6 .col-md-12>.row:first-child{
   margin: 0 -17%;
   padding: 7% 0;
 }
-
+*/
 
 
 
