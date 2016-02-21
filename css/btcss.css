@@ -6911,7 +6911,9 @@ h2 span{
   #page4 .carousel-inner{
   height: 46%;
 }
-
-
-
+}
+@media screen and (max-width: 1000px){
+  body{
+    overflow: hidden;
+  }
 }
