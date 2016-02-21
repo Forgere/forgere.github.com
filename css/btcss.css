@@ -6786,6 +6786,7 @@ body {
 }
 body {
   padding: 2.41% 0 0 0;
+  min-width: 500px;
 }
 #page1{
   background-image: url(../images/bg.png);
@@ -6884,7 +6885,7 @@ h2 span{
 }
 #page6 .xuanyan{
   background: #22212e;
-  padding: 2.47% 15px;
+  padding: 2.47% 0;
 }
 
 
