@@ -1100,7 +1100,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #248057;
+/*   color: #248057; */
   text-decoration: none;
 }
 a:hover,
@@ -6786,10 +6786,12 @@ body {
 }
 body {
   padding: 2.41% 0 0 0;
+  overflow: hidden;
 }
 #page1{
   background-image: url(../images/bg.png);
   padding: 12% 0 7.2% 0;
+  min-width: 
 }
 h2{font-size: 3.14em;line-height: 1.5em;}
 h2 span{
