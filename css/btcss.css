@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Lato');
 /*!
  * Default theme for Pingendo 
  * Homepage: http://pingendo.com  
@@ -1216,7 +1215,7 @@ h6 .small,
 .h5 .small,
 .h6 .small {
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.6em;
   color: #777777;
 }
 h1,
@@ -6132,31 +6131,31 @@ button.close {
   width: 15%;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 28px;
+  color: #838292;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0,0) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0,0) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0,0) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
 .carousel-control.right {
   left: auto;
   right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0,0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0,0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0,0) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover,
 .carousel-control:focus {
   outline: 0;
-  color: #ffffff;
+  color: #ca7985;
   text-decoration: none;
   opacity: 0.9;
   filter: alpha(opacity=90);
@@ -6172,12 +6171,12 @@ button.close {
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
-  left: 50%;
+  left: 0%;
   margin-left: -10px;
 }
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
-  right: 50%;
+  right: 10%;
   margin-right: -10px;
 }
 .carousel-control .icon-prev,
@@ -6189,10 +6188,10 @@ button.close {
   font-family: serif;
 }
 .carousel-control .icon-prev:before {
-  content: '\2039';
+  content: '〈 ';
 }
 .carousel-control .icon-next:before {
-  content: '\203a';
+  content: '〉';
 }
 .carousel-indicators {
   position: absolute;
@@ -6209,19 +6208,19 @@ button.close {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 1px;
+  margin: 1px 3.875%;
   text-indent: -999px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
+/*  border: 1px solid #ffffff;*/
+  /*border-radius: 10px;*/
   cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #6d6c7f;
+  /*background-color: rgba(0, 0, 0, 0);*/
 }
 .carousel-indicators .active {
-  margin: 0;
+  margin: 0 3.875% ;
   width: 12px;
   height: 12px;
-  background-color: #ffffff;
+  background-color: #a10b21;
 }
 .carousel-caption {
   position: absolute;
@@ -6246,7 +6245,7 @@ button.close {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    font-size: 30px;
+    font-size: 90px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
@@ -6776,6 +6775,9 @@ body {
 .carousel-inner > .item > img {
   height: 65%;
 }
+.navbar a{
+  outline-style: none;
+}
 body {
   padding: 2.41% 0 0 0;
 }
@@ -6794,7 +6796,7 @@ h2 span{
   line-height: 2.12em;
   font-size: 1.14em;
 }
-#page1 hr{
+#page1 hr,#page5 hr{
   border-top: 3px solid #681b25;
 }
 #page2{
@@ -6821,7 +6823,7 @@ h2 span{
 #page3 .col-md-10:hover{
   box-shadow: 8px 8px 5px #a10b21;
 }
-.col-md-10{
+#page3 .col-md-10{
   background-color: #dad9dd;
 }
 #page3 .tpad{
@@ -6829,9 +6831,6 @@ h2 span{
 }
 #page3 .row .row{
   margin-top: 7.6%;
-}
-@media screen and (min-width:320px){
- css代码  
 }
 #page3 .row .row div{
   margin-left:0;
@@ -6841,4 +6840,75 @@ h2 span{
 }
 .pbot3,.pbot4{
   padding-bottom:31px; 
+}
+#page4{
+  background: #f8f7f8;
+  color:#33333f;
+  padding:5% 0;
+}
+#page4 h3{
+  font-size: 28px;
+  border-left: 7px solid #a10b21;
+  text-indent: 12px;
+}
+#page4 h3 small{
+  font-size: 57.6%;
+}
+#page4 ul{
+  line-height: 36px;
+  padding: 0;
+  margin-top: 10px;
+}
+#page4 .col-xs-12{
+  padding: 9% 0;
+}
+#page5{
+  background: #22212e;
+    padding: 7% 0 8.1% 0;
+}
+#page6{
+  background: #33333f;
+  color:#ffffff;
+  padding: 7.8% 0 8.1% 0;
+}
+#page6 p{
+  color: #646375;
+  font-size: 16px;
+  line-height: 34px;
+}
+#page6 .xuanyan{
+  background: #22212e;
+  margin: 0 -32%;
+  padding: 2.47% 0;
+}
+#page6 .col-md-12>.row:first-child{
+  margin: 0 -17%;
+  padding: 7% 0;
+}
+
+
+
+
+@media screen and (min-width: 992px){
+#page4 .carousel-inner .item:nth-child(1),#page4 .carousel-inner .item:nth-child(3){
+  padding-bottom: 33.3px;
+}
+}
+@media screen and (max-width:992px){
+  #page3 .row .row{
+  margin-top: 5px;
+  margin-left: 12%;
+}
+  #page2 .container .lmar{
+    margin-right: 4%;
+  }
+  #page4 .col-sm-offset-0{
+    padding-left: 5%;
+  }
+  #page4 .carousel-inner{
+  height: 46%;
+}
+
+
+
 }

@@ -1,351 +1,400 @@
 <html><head>
-    <meta name="keywords" content="前端工程师简历">
-    <meta name="description" content="张伟的个人简历">
-    <title>个人简历</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <link href="css/btcss.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript">
-      $(function(){
-         $('.navbar a').click(function(){
-          $('li.active').removeClass('active');
-          $(this).parent().addClass('active');
-         })
-         $('.navbar a').anchorGoWhere({target:1});
-        })
-        $.fn.anchorGoWhere = function(options){
-                var obj = jQuery(this);
-                var defaults = {target:0, timer:500};
-                var o = jQuery.extend(defaults,options);
-                obj.each(function(i){
-                    jQuery(obj[i]).click(function(){
-                       var _rel = jQuery(this).attr("href").substr(1);
-                        switch(o.target){
-                           case 1: 
-                              var _targetTop = jQuery("#"+_rel).offset().top;
-                               jQuery("html,body").animate({scrollTop:_targetTop},o.timer);
-                               break;
-                           case 2:
-                               var _targetLeft = jQuery("#"+_rel).offset().left;
-                               jQuery("html,body").animate({scrollLeft:_targetLeft},o.timer);
-                               break;
-                       }
-                       return false;
-                   });                  
-               });
-           };
-    </script>
-  </head><body>
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-            <span class="sr-only">切换导航</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#page1">主页</a>
-            </li>
-            <li>
-              <a href="#page2">关于我</a>
-            </li>
-            <li>
-              <a href="#page3">IT技能</a>
-            </li>
-            <li>
-              <a href="#page4">我的经历</a>
-            </li>
-            <li>
-              <a href="#page5">我的作品</a>
-            </li>
-            <li>
-              <a href="#page6">联系我</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="page1">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="text-center">
-              <h2>一切不能杀死我的
-                <span>都会使我更强</span>
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p class="text-center">我叫张伟,
-              <br>24岁,
-              <br>想成为一名前端工程师
-              <br>573596314@qq.com</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 col-xs-offset-4">
-            <div class="row">
-              <div class="col-xs-4 col-xs-offset-4">
-                <hr>
-              </div>              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section active" id="page2">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-2 col-sm-offset-2 col-xs-3 col-xs-offset-1 text-center">
-            <img src="images/xueli.png" height="141" width="138" class="img-responsive img-thumbnail">
-            <h3 class="text-center">
-              <span class="hidden-sm hidden-xs">学历&nbsp;&nbsp;</span>本科</h3>
-          </div>
-          <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
-            <img src="images/zuobiao.png" height="141" width="138" class="img-responsive img-thumbnail">
-            <h3 class="text-center">
-              <span class="hidden-sm hidden-xs">坐标&nbsp;&nbsp;</span>上海</h3>
-          </div>
-          <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
-            <img src="images/state.png" height="141" width="138" class="img-responsive img-thumbnail">
-            <h3 class="text-center">
-              <span class="hidden-sm hidden-xs">状态&nbsp;&nbsp;</span>求职</h3>
-          </div>
-        </div>
-        <div class="row rowm">
-          <div class="col-md-6 col-md-offset-3 col-sm-7 col-sm-offset-2">
-            <ul class="list-unstyled text-center">
-              <li>2014年毕业于江南大学机械设计专业，曾任职生产管理</li>
-              <li>接触到前端后便一发不可收拾，在工作之余学习前端技术</li>
-              <li>对于响应良好，页面精美，效果炫目的网页顶礼膜拜</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="page3">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="text-center">IT
-              <span>技能</span>
-              <br>
-              <small>·&nbsp;&nbsp;INFORMATION TECHNOLOGY SKILLS&nbsp;&nbsp;·</small>
-            </h2>
-          </div>
-        </div>
-        <div class="row tpad">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-                <div class="row pbot1">
-                  <div class="col-md-3 col-sm-3 text-right">
-                    <img src="images/seo.png" class="hidden-xs img-thumbnail">
-                  </div>
-                  <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
-                    <ul class="text-left">
-                      <li>了解搜索引擎爬虫的行为准则</li>
-                      <li>了解如何在网站内部进行seo，如网页结构，内容，界面</li>
-                      <li>熟悉在前端代码结构中运用seo，例如扁平化结构，语意化标签，精简代码</li>
-                    </ul>
-                  </div>
+        <meta name="keywords" content="前端工程师简历">
+        <meta name="description" content="张伟的个人简历">
+        <title>个人简历</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <link href="css/btcss.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">
+            $(function(){
+                 $('.navbar a').click(function(){
+                  $('li.active').removeClass('active');
+                  $(this).parent().addClass('active');
+                 })
+                 $('.navbar a').anchorGoWhere({target:1});
+                 $("#carousel-example ol li:nth-child(1)").click(function(){
+                     $("#carousel-example").carousel(0);
+                  });
+                  $("#carousel-example ol li:nth-child(2)").click(function(){
+                     $("#carousel-example").carousel(1);
+                  });
+                  $("#carousel-example ol li:nth-child(3)").click(function(){
+                   $("#carousel-example").carousel(2);
+                });
+                })
+                $.fn.anchorGoWhere = function(options){
+                        var obj = jQuery(this);
+                        var defaults = {target:0, timer:500};
+                        var o = jQuery.extend(defaults,options);
+                        obj.each(function(i){
+                            jQuery(obj[i]).click(function(){
+                               var _rel = jQuery(this).attr("href").substr(1);
+                                switch(o.target){
+                                   case 1: 
+                                      var _targetTop = jQuery("#"+_rel).offset().top;
+                                       jQuery("html,body").animate({scrollTop:_targetTop},o.timer);
+                                       break;
+                                   case 2:
+                                       var _targetLeft = jQuery("#"+_rel).offset().left;
+                                       jQuery("html,body").animate({scrollLeft:_targetLeft},o.timer);
+                                       break;
+                               }
+                               return false;
+                           });                  
+                       });
+                   };
+        </script>
+    </head><body>
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-              </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#page1">主页</a>
+                        </li>
+                        <li>
+                            <a href="#page2">关于我</a>
+                        </li>
+                        <li>
+                            <a href="#page3">IT技能</a>
+                        </li>
+                        <li>
+                            <a href="#page4">我的经历</a>
+                        </li>
+                        <li>
+                            <a href="#page5">我的作品</a>
+                        </li>
+                        <li>
+                            <a href="#page6">联系我</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
-                <div class="row pbot2">
-              <div class="col-md-3 col-sm-3 text-right">
-                <img src="images/html.png" class="hidden-xs img-responsive img-thumbnail">
-              </div>
-              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
-                <ul class="text-left">
-                  <li>深刻理解网页结构，样式，表现分离</li>
-                  <li>熟练运用html标签，使用语意化的标签</li>
-                  <li>了解html5新特性svg,localStorage</li>
-                  <li>谨记渐进增强，平稳退化</li>
-                </ul>
-              </div>
-            </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
-            <div class="row pbot3">
-              <div class="col-md-3 col-sm-3 text-right">
-                <img src="images/css.png" class="hidden-xs img-responsive img-thumbnail">
-              </div>
-              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
-                <ul class="text-left">
-                  <li>熟练运用css及css3新属性</li>
-                  <li>了解浏览器兼容性，了解常见的css hack</li>
-                  <li>熟悉mac/os系统</li>
-                  <li>熟悉Bootstrap框架</li>
-                </ul>
-              </div>
-            </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
-              <div class="row pbot4">
-              <div class="col-md-3 col-sm-3 text-right">
-                <img src="images/js.png" class="hidden-xs img-responsive img-thumbnail">
-              </div>
-              <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
-                <ul class="styled text-left">
-                  <li>熟悉jquery库</li>
-                  <li>注重原生js学习，了解闭包</li>
-                  <li>了解ajax运作原理json数据结构</li>
-                </ul>
-              </div>
-            </div>
-              </div>
-            </div>
-          </div>
         </div>
-        
-        </div>
-      </div>
-    <div class="section" id="page4">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 page-header text-center">
-            <h2>我的经历</h2>
-          </div>
-        </div>
-        <div id="carousel-example" data-interval="false" class="carousel slide height" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="item active height">
-              <img src="images/iconfont-zhihu.png" class="img-thumbnail">
-              <div class="carousel-caption">
-                <h3>前端之路
-                  <small>2015年11月～至今</small>
-                </h3>
-                <ul class="col-md-6 col-md-offset-3 text-left">
-                  <li>工作之余开始系统的学习前端</li>
-                  <li>结合网络教程以及前端书籍，基础与实战相结合</li>
-                  <li>渐渐认识到前端的广度及深度，辞职在家专心自学</li>
-                </ul>
-              </div>
+        <div class="section" id="page1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h2>一切不能杀死我的
+                                <span>都会使我更强</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">我叫张伟,
+                            <br>24岁,
+                            <br>想成为一名前端工程师
+                            <br>573596314@qq.com</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4">
+                        <div class="row">
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="item">
-              <img src="images/iconfont-zhihu.png">
-              <div class="carousel-caption">
-                <h3>工作经历
-                  <small>2014年6月～2016年1月</small>
-                </h3>
-                <ul class="col-md-6 col-md-offset-3 text-left">
-                  <li>中荣印刷（昆山）有限公司</li>
-                  <li>主任助理</li>
-                  <li>负责生产部门的精细化管理，质量改进项目</li>
-                  <li>质量改进方案的实施后，问题得到根除，得到领导和客户的一致好评</li>
-                  <li>开始接触前端，为之着迷</li>
-                </ul>
-              </div>
+        </div>
+        <div class="section active" id="page2">
+            <div class="container">
+                <div class="row lmar">
+                    <div class="col-sm-2 col-sm-offset-2 col-xs-3 col-xs-offset-1 text-center">
+                        <img src="images/xueli.png" height="141" width="138" class="img-responsive img-thumbnail">
+                        <h3 class="text-center">
+                            <span class="hidden-sm hidden-xs">学历&nbsp;&nbsp;</span>本科</h3>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
+                        <img src="images/zuobiao.png" height="141" width="138" class="img-responsive img-thumbnail">
+                        <h3 class="text-center">
+                            <span class="hidden-sm hidden-xs">坐标&nbsp;&nbsp;</span>上海</h3>
+                    </div>
+                    <div class="col-sm-2 col-sm-offset-1 col-xs-3 col-xs-offset-1 text-center">
+                        <img src="images/state.png" height="141" width="138" class="img-responsive img-thumbnail">
+                        <h3 class="text-center">
+                            <span class="hidden-sm hidden-xs">状态&nbsp;&nbsp;</span>求职</h3>
+                    </div>
+                </div>
+                <div class="row rowm">
+                    <div class="col-md-6 col-md-offset-3 col-sm-7 col-sm-offset-2">
+                        <ul class="list-unstyled text-center">
+                            <li>2014年毕业于江南大学机械设计专业，曾任职生产管理</li>
+                            <li>接触到前端后便一发不可收拾，在工作之余学习前端技术</li>
+                            <li>对于响应良好，页面精美，效果炫目的网页顶礼膜拜</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="item">
-              <img src="images/iconfont-zhihu.png">
-              <div class="carousel-caption">
-                <h3>学习经历
-                  <small>2010年9月～2014年6月</small>
-                </h3>
-                <ul class="col-md-6 col-md-offset-3 text-left">
-                  <li>江南大学</li>
-                  <li>机械设计专业</li>
-                  <li>获得CAD中级证书</li>
-                  <li>获得机动车驾驶证c1</li>
-                  <li>设计的一条自动化生产线应用于实际生产</li>
-                </ul>
-              </div>
+        </div>
+        <div class="section" id="page3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">IT
+                            <span>技能</span>
+                            <br>
+                            <small>·&nbsp;&nbsp;INFORMATION TECHNOLOGY SKILLS&nbsp;&nbsp;·</small>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row tpad">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                                <div class="row pbot1">
+                                    <div class="col-sm-3 text-right">
+                                        <img src="images/seo.png" class="hidden-xs img-thumbnail">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                                        <ul class="text-left">
+                                            <li>了解搜索引擎爬虫的行为准则</li>
+                                            <li>了解如何在网站内部进行seo，如网页结构，内容，界面</li>
+                                            <li>熟悉在前端代码结构中运用seo，例如扁平化结构，语意化标签，精简代码</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                                <div class="row pbot2">
+                                    <div class="col-sm-3 text-right">
+                                        <img src="images/html.png" class="hidden-xs img-responsive img-thumbnail">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                                        <ul class="text-left">
+                                            <li>深刻理解网页结构，样式，表现分离</li>
+                                            <li>熟练运用html标签，使用语意化的标签</li>
+                                            <li>了解html5新特性svg,localStorage</li>
+                                            <li>谨记渐进增强，平稳退化</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
+                                <div class="row pbot3">
+                                    <div class="col-sm-3 text-right">
+                                        <img src="images/css.png" class="hidden-xs img-responsive img-thumbnail">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                                        <ul class="text-left">
+                                            <li>熟练运用css及css3新属性</li>
+                                            <li>了解浏览器兼容性，了解常见的css hack</li>
+                                            <li>熟悉mac/os系统</li>
+                                            <li>熟悉Bootstrap框架</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1  col-xs-10 col-xs-offset-1">
+                                <div class="row pbot4">
+                                    <div class="col-md-3 col-sm-3 text-right">
+                                        <img src="images/js.png" class="hidden-xs img-responsive img-thumbnail">
+                                    </div>
+                                    <div class="col-md-9 col-sm-8 col-xs-10 col-xs-offset-1">
+                                        <ul class="styled text-left">
+                                            <li>熟悉jquery库</li>
+                                            <li>注重原生js学习，了解闭包</li>
+                                            <li>了解ajax运作原理json数据结构</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="fa fa-3x fa-angle-left icon-prev"></i></a>
-          <a class="right carousel-control body" href="#carousel-example" data-slide="next"><i class="fa fa-3x fa-angle-right icon-next"></i></a>
         </div>
-      </div>
-    </div>
-    <div class="section" id="page5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="text-center page-header">我的作品</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="images/iconfont-zuopin.png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="images/iconfont-zuopin (1).png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4">
-            <img src="images/iconfont-zuopin (2).png" class="center-block img-circle img-responsive">
-            <h3 class="text-center">John Doe</h3>
-            <p class="text-center">Developer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section text-center col-md-12" id="page6">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="text-center">联系我</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p>前端的路才刚刚开始
-              <br>愿往来有良师，谈笑有“志”友
-              <br>重要的事情说三遍：写，写，写</p>
-            <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-4 text-center">
-                <a><img src="images/iconfont-shouji.png" class="img-responsive img-thumbnail"></a>
-                <p class="text-center">18913247044</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-4">
-                <a href="mailto:573596314@qq.com"><img src="images/iconfont-youxiang.png" class="img-responsive img-thumbnail"></a>
-                <p>573596314@qq.com</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-4">
-                <a href="http://www.cnblogs.com/forgere/"><img src="images/iconfont-blog.png" class="img-responsive img-thumbnail"></a>
-                <p class="text-center">博客</p>
-              </div>
+        <div class="section" id="page4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>我的<span>经历</span>
+                            <br>
+                            <small>·&nbsp;&nbsp;MY EXPERIENCE&nbsp;&nbsp;·</small>
+                        </h2>
+                    </div>
+                </div>
+                <div id="carousel-example" data-interval="false" class="carousel slide height" data-ride="carousel">
+                     <ol class="carousel-indicators">
+                        <li data-target="carousel-example" data-slide-to="0" class="active"></li>
+                        <li data-target="carousel-example" data-slide-to="1"></li>
+                        <li data-target="carousel-example" data-slide-to="2"></li>
+                     </ol> 
+                    <div class="carousel-inner">
+                        <div class="item height active">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
+                                            <img src="images/ex3.png">
+                                        </div>
+                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
+                                            <h3 class="text-left">前端之路
+                                                <small>2015年11月～至今</small>
+                                            </h3>
+                                            <ul class="col-md-8 list-unstyled text-left">
+                                                <li>工作之余开始系统的学习前端</li>
+                                                <li>结合网络教程以及前端书籍，基础与实战相结合</li>
+                                                <li>渐渐认识到前端的广度及深度，辞职在家专心自学</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
+                                            <img src="images/ex2.png">
+                                        </div>
+                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
+                                            <h3 class="text-left">工作经历
+                                            <small>2014年6月～2016年1月</small>
+                                            </h3>
+                                            <ul class="col-md-8 list-unstyled text-left">
+                                                <li>中荣印刷（昆山）有限公司 担任主任助理</li>
+                                                <li>负责生产部门的精细化管理，质量改进项目</li>
+                                                <li>质量改进方案的实施后，问题得到根除，得到领导和客户的一致好评</li>
+                                                <li>开始接触前端，为之着迷</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-sm-3 col-sm-offset-2 col-md-offset-3 hidden-xs">
+                                            <img src="images/ex1.png">
+                                        </div>
+                                        <div class="col-xs-7 col-md-6 col-sm-offset-0 text-left col-xs-offset-2">
+                                            <h3>学习经历
+                                            <small>2010年9月～2014年6月</small>
+                                            </h3>
+                                            <ul class="col-md-8 list-unstyled text-left">
+                                                <li>江南大学 机械设计专业</li>
+                                                <li>获得CAD中级证书</li>
+                                                <li>获得CET-4级证书</li>
+                                                <li>设计的一条自动化生产线应用于实际生产</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
+                    <a class="right carousel-control body" href="#carousel-example" data-slide="next"><i class="icon-next  fa fa-angle-right"></i></a>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-md-4 col-sm-6 col-xs-4">
-                <a href="https://www.zhihu.com/people/da-long-xia-xiao-tang-yuan"><img src="images/iconfont-zhihu.png" class="img-responsive img-thumbnail"></a>
-                <p class="text-center">知乎</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-4">
-                <a href="http://sighttp.qq.com/authd?IDKEY=f8e8c98f52d19a9f911785e1ae6f90e627afb11db7fcbfde"><img src="images/iconfont-qq.png" class="img-responsive img-thumbnail"></a>
-                <p class="text-center">QQ</p>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-4">
-                <a href="https://github.com/Forgere"><img src="images/iconfont-github.png" class="img-responsive img-thumbnail"></a>
-                <p class="text-center">Github</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  
+        <div class="section" id="page5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">我的<span>作品</span><br/><small>·&nbsp;&nbsp;MY FRONT END WORKS&nbsp;&nbsp;·</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 col-xs-offset-4">
+                        <div class="row">
+                            <div class="col-xs-4 col-xs-offset-4">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="images/iconfont-zuopin.png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="images/iconfont-zuopin (1).png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <img src="images/iconfont-zuopin (2).png" class="center-block img-circle img-responsive">
+                        <h3 class="text-center">John Doe</h3>
+                        <p class="text-center">Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section text-center col-md-12" id="page6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center"><span>联系</span>我<br/><small>·&nbsp;&nbsp;CONTACT ME KOWN MORE&nbsp;&nbsp;·</small></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                          <div class="col-xs-10 col-xs-offset-1">
+                            <div class="row">
+                               <div class="col-md-2 col-md-offset-1 col-xs-3 col-xs-offset-2 text-center">
+                                <a href="#"><img src="images/foot_03.png" class="img-responsive img-thumbnail"></a>
+                                <p class="text-center">18913247044</p>
+                            </div>
+                            <div class="col-md-2  col-md-offset-0 col-xs-3 col-xs-offset-2">
+                                <a target="_blank" href="mailto:573596314@qq.com"><img src="images/foot_05.png" class="img-responsive img-thumbnail"></a>
+                                <p>573596314@qq.com</p>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <a target="_blank" href="http://www.cnblogs.com/forgere/"><img src="images/foot_07.png" class="img-responsive img-thumbnail"></a>
+                                <p class="text-center">博客</p>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=f8e8c98f52d19a9f911785e1ae6f90e627afb11db7fcbfde"><img src="images/foot_11.png" class="img-responsive img-thumbnail"></a>
+                                <p class="text-center">QQ</p>
+                            </div>
+                            <div class="col-md-2 col-xs-4">
+                                <a target="_blank" href="https://github.com/Forgere"><img src="images/foot_09.png" class="img-responsive img-thumbnail"></a>
+                                <p class="text-center">Github</p>
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row xuanyan">
+                          <div class="col-md-12">
+                            <p>前端的路才刚刚开始。愿往来有良师，谈笑有“志”友
+                            <br>重要的事情说三遍：写，写，写</p>
+                          </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    
 
 </body></html>
