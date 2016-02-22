@@ -6160,14 +6160,13 @@ button.close {
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
-  left: 5%;
-  top:36%;
+  left: -53%;
+  top:26%;
   margin-left: -10px;
 }
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
-  right: 10%;
-  margin-right: -10px;
+  right: 50%;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
@@ -6178,10 +6177,10 @@ button.close {
   font-family: "微软雅黑";
 }
 .carousel-control .icon-prev:before {
-  content: '〈';
+  content: url(../images/left.png);
 }
 .carousel-control .icon-next:before {
-  content: '〉';
+  content: url(../images/right.png);
 }
 .carousel-indicators {
   position: absolute;
@@ -6874,7 +6873,7 @@ h2 span{
   text-decoration: none;
   line-height: 20px;
   font-size: 20px;
-  font-family: 黑体;
+  font-family: é»‘ä½“;
 }
 #page5 a:hover{
   color:#880f24;
@@ -6882,7 +6881,7 @@ h2 span{
 #page6{
   background: #33333f;
   color:#ffffff;
-  padding: 7.8% 0 8.1% 0;
+  padding: 7.8% 0 2% 0;
 }
 #page6 p{
   color: #ffffff;
@@ -6937,6 +6936,10 @@ body small span{font-size: 22px;}
 }
 }
 @media screen and (max-width: 767px){
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-right {
+  right: 50%;
+}
  #page3 .col-md-10{
   padding: 2% 0;
 }
