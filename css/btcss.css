@@ -255,17 +255,17 @@ th {
 }
   @font-face {
     font-family: 'lant';
-    src: url('../font/lanthei.eot');
-    src: url('../font/lanthei.eot?#iefix') format('embedded-opentype'),
-          url('../font/lanthei.TTF') format('truetype');
+    src: url('../font/FZLTHJW.eot');
+    src: url('../font/FZLTHJW.eot?#iefix') format('embedded-opentype'),
+          url('../font/FZLTHJW.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
   @font-face {
     font-family: 'lantc';
-    src: url('../font/Lantc.eot');
-    src: url('../font/Lantc.eot?#iefix') format('embedded-opentype'),
-          url('../font/Lantc.TTF') format('truetype');
+    src: url('../font/FZLTCHJW.eot');
+    src: url('../font/FZLTCHJW.eot?#iefix') format('embedded-opentype'),
+          url('../font/FZLTCHJW.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -6793,10 +6793,10 @@ body {
   padding: 12% 0 7.2% 0;
   min-width: 
 }
-h2{font-size: 3.14em;line-height: 1.5em;font-family: lant;font-weight: bold}
+h2{font-size: 3.14em;line-height: 1.5em;font-family: lant;font-weight: 100;}
 h2 span{
-  font-weight: bolder;
-  font-family: Lantc; 
+  font-weight: bold;
+  font-family: Lantc;
 }
 #page1 p{
   color: #A3A3AC;
