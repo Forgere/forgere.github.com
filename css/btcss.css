@@ -261,14 +261,6 @@ th {
     font-weight: normal;
     font-style: normal;
   }
-  @font-face {
-    font-family: 'lantc';
-    src: url('../font/FZLTCHJW.eot');
-    src: url('../font/FZLTCHJW.eot?#iefix') format('embedded-opentype'),
-          url('../font/FZLTCHJW.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1098,9 +1090,9 @@ textarea {
   line-height: inherit;
 }
 a {
-/*   color: #248057; */
+  color: #ffffff;
   text-decoration: none;
-}
+  }
 a:hover,
 a:focus {
   color: #13442e;
@@ -6795,8 +6787,8 @@ body {
 }
 h2{font-size: 3.14em;line-height: 1.5em;font-family: lant;font-weight: 100;}
 h2 span{
-  font-weight: bold;
-  font-family: Lantc;
+  font-weight: 900;
+  font-family: Lant;
 }
 #page1 p{
   color: #A3A3AC;
@@ -6849,9 +6841,7 @@ h2 span{
   padding-left: 3%;
   padding-right: 0;
 }
-#page3 .col-md-9{
-  margin-left: 40px;
-}
+
 #page4{
   background: #f8f7f8;
   color:#33333f;
@@ -6877,7 +6867,26 @@ h2 span{
 }
 #page5{
   background: #22212e;
-    padding: 7% 0 8.1% 0;
+    padding: 5% 0 8.1% 0;
+}
+#page5 .works img{
+  margin: 13.2% 0;
+}
+#page5 .works img:hover{
+  box-shadow: 6px 6px 6px #880f24;
+}
+#page5 .col-xs-offset-2{
+  margin-top: 2%;
+  margin-bottom:2%;
+}
+#page5 a{
+  text-decoration: none;
+  line-height: 20px;
+  font-size: 28px;
+  font-family: 黑体;
+}
+#page5 a:hover{
+  color:#880f24;
 }
 #page6{
   background: #33333f;
@@ -6898,7 +6907,6 @@ h2 span{
 #page6 .container .col-xs-12{
   margin: 7% 0;
 }
-#page6 .ml20{margin-left: -20px;}
 #page4 i{font-style: normal;}
 
 
@@ -6925,5 +6933,10 @@ h2 span{
 @media screen and (min-width: 768px){
   #page3 .col-md-9{
   margin-left: -24px;
+}
+}
+@media screen and (max-width: 767px){
+    #page3 .col-md-9{
+  margin-left: 17px;
 }
 }
