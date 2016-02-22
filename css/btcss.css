@@ -1,6 +1,6 @@
 
 html {
-  font-family: lant sans-serif;
+  font-family: "微软雅黑" sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -99,7 +99,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: lant monospace, monospace;
+  font-family: "微软雅黑" monospace, monospace;
   font-size: 1em;
 }
 button,
@@ -253,14 +253,6 @@ th {
     border: 1px solid #ddd !important;
   }
 }
-  @font-face {
-    font-family: 'lant';
-    src: url('../font/FZLTHJW.eot');
-    src: url('../font/FZLTHJW.eot?#iefix') format('embedded-opentype'),
-          url('../font/FZLTHJW.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1075,7 +1067,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: lant;
+  font-family: "微软雅黑";
   font-size: 14px;
   line-height: 1.42857143;
   color: #ffffff;
@@ -1085,7 +1077,7 @@ input,
 button,
 select,
 textarea {
-  font-family: lant inherit;
+  font-family: "微软雅黑" inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -1175,7 +1167,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: lant;
+  font-family: "微软雅黑";
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1513,7 +1505,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: lant;
+  font-family: "微软雅黑";
 }
 code {
   padding: 2px 4px;
@@ -5817,7 +5809,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: lant;
+  font-family: "微软雅黑";
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5924,7 +5916,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: lant;
+  font-family: "微软雅黑";
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;
@@ -6182,7 +6174,7 @@ button.close {
   height: 20px;
   margin-top: -10px;
   line-height: 1;
-  font-family: lant;
+  font-family: "微软雅黑";
 }
 .carousel-control .icon-prev:before {
   content: '〈';
@@ -6785,10 +6777,10 @@ body {
   padding: 12% 0 7.2% 0;
   min-width: 
 }
-h2{font-size: 3.14em;line-height: 1.5em;font-family: lant;font-weight: 100;}
+h2{font-size: 3.14em;line-height: 1.5em;font-family: "微软雅黑";font-weight: 100;}
 h2 span{
   font-weight: 900;
-  font-family: Lant;
+  font-family: "微软雅黑";
 }
 #page1 p{
   color: #A3A3AC;
