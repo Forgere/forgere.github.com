@@ -6235,7 +6235,7 @@ button.close {
     width: 30px;
     height: 30px;
     margin-top: -15px;
-    font-size: 90px;
+    font-size: 40px;
   }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
@@ -6783,7 +6783,7 @@ h2 span{
   font-family: "微软雅黑";
 }
 #page1 p{
-  color: #A3A3AC;
+  color: #7f7e94;
   padding: 10% 0 3.2% 0;
   line-height: 2.12em;
   font-size: 1.14em;
@@ -6931,11 +6931,17 @@ h2 span{
     #page3 .col-md-9{
   margin-left: -15px;
 }
+  #page4 h3{
+    margin-left: 12%;
+  }
 #page4 ul{
   list-style:square;
 }
 #page6 .mlef{
   margin-left: 10px;
+}
+#page1 h2 span{
+  display: block;
 }
 }
 @media screen and (max-width: 414px){
