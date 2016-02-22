@@ -4381,6 +4381,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a {
   color: #5a596b;
+  text-indent: 24px;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -6196,9 +6197,9 @@ button.close {
 }
 .carousel-indicators li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px 3.875%;
+  width: 8px;
+  height: 8px;
+  margin: 0px 2.875%;
   text-indent: -999px;
 /*  border: 1px solid #ffffff;*/
   /*border-radius: 10px;*/
@@ -6207,9 +6208,9 @@ button.close {
   /*background-color: rgba(0, 0, 0, 0);*/
 }
 .carousel-indicators .active {
-  margin: 0 3.875% ;
-  width: 12px;
-  height: 12px;
+  margin: 0 2.875%;
+  width: 8px;
+  height: 8px;
   background-color: #a10b21;
 }
 .carousel-caption {
@@ -6777,7 +6778,7 @@ body {
   padding: 12% 0 7.2% 0;
   min-width: 
 }
-h2{font-size: 3.14em;line-height: 1.5em;font-family: "微软雅黑";font-weight: 100;}
+
 h2 span{
   font-weight: 900;
   font-family: "微软雅黑";
@@ -6837,7 +6838,7 @@ h2 span{
 #page4{
   background: #f8f7f8;
   color:#33333f;
-  padding:5% 0;
+  padding:6% 0;
 }
 
 #page4 h3{
@@ -6854,15 +6855,13 @@ h2 span{
   margin-top: 10px;
   font-size: 16px;
 }
+
 #page4 .col-xs-12{
   margin: 9% 0;
 }
 #page5{
   background: #22212e;
     padding: 5% 0 8.1% 0;
-}
-#page5 .works img{
-  margin: 13.2% 0;
 }
 #page5 .works img:hover{
   box-shadow: 6px 6px 6px #880f24;
@@ -6874,7 +6873,7 @@ h2 span{
 #page5 a{
   text-decoration: none;
   line-height: 20px;
-  font-size: 28px;
+  font-size: 20px;
   font-family: 黑体;
 }
 #page5 a:hover{
@@ -6900,7 +6899,7 @@ h2 span{
   margin: 7% 0;
 }
 #page4 i{font-style: normal;}
-
+body small span{font-size: 22px;}
 
 
 @media screen and (max-width:1024px){
@@ -6916,6 +6915,9 @@ h2 span{
   body{
     overflow: hidden;
   }
+  #page6 .mlef{
+  margin-left: 12px;
+}
 }
 @media screen and (min-width:1024px){
 #page3 .col-md-10{
@@ -6923,11 +6925,36 @@ h2 span{
 }
 }
 @media screen and (min-width: 768px){
+  #page5 .works img{
+  margin: 13.2% 0 13.2% 5%;
+}
+  h2{font-size: 3.14em;line-height: 1.5em;font-family: "微软雅黑";font-weight: 100;}
   #page3 .col-md-9{
   margin-left: -24px;
 }
+#page4 .col-sm-offset-0{
+  margin-top: 0%;
+}
 }
 @media screen and (max-width: 767px){
+ #page3 .col-md-10{
+  padding: 2% 0;
+}
+   #page2 .container .lmar{
+    margin-left: 4%;
+  }
+ #page4 h3{
+  font-size: 24px;
+}
+#page4 ul{
+  font-size: 13px;
+}
+ #page2 h3{
+  font-size: 12px;
+}
+  #page4 .col-sm-offset-0{
+  margin-top: 1%;
+}
     #page3 .col-md-9{
   margin-left: -15px;
 }
@@ -6936,9 +6963,6 @@ h2 span{
   }
 #page4 ul{
   list-style:square;
-}
-#page6 .mlef{
-  margin-left: 10px;
 }
 #page1 h2 span{
   display: block;
@@ -6951,5 +6975,9 @@ h2 span{
   #page2 .bpad{
     padding-left: 0;
     padding-right: 0;
+  }
+  h2{font-size: 2em}
+  #page6 p span{
+    display: block;
   }
 }
