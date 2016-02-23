@@ -9,9 +9,49 @@
         <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
         <link href="css/btcss.css" rel="stylesheet" type="text/css">
         <script type="text/javascript">
             $(function(){
+                // $('.navbar').click(function(){
+                //     alert($('body').scrollTop())
+                //     // alert(postop3)
+                //     }
+                //     )
+               
+                var postop1 = $('#page1').offset().top;
+                var postop2 = $('#page2').offset().top;
+                var postop3 = $('#page3').offset().top;
+                var postop4 = $('#page4').offset().top;
+                var postop5 = $('#page5').offset().top;
+                var postop6 = $('#page6').offset().top;
+                $(document).mousewheel(function(event) {
+                    change();
+                })
+                function change(){
+                var bsctop = $('body').scrollTop();
+                if (postop1<bsctop&&bsctop<postop2) {
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(1).addClass('active')}
+                if(postop2<bsctop&&bsctop<postop3){
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(2).addClass('active')}
+                if(postop3<bsctop&&bsctop<postop4){
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(3).addClass('active')}
+                if(postop4<bsctop&&bsctop<postop5){
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(4).addClass('active')}
+                if(postop5<bsctop){
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(5).addClass('active')
+                    }
+                if(bsctop<postop1){
+                    $('li.active').removeClass('active');
+                    $('.navbar ul li').eq(0).addClass('active')  
+                    }}
+                 
+            
                  $('.navbar a').click(function(){
                   $('li.active').removeClass('active');
                   $(this).parent().addClass('active');
@@ -41,10 +81,9 @@
                      $(".pbot").each(function() {
                             //求padding的值
                            var h_pad = $(this).innerHeight() - $(this).height();
-                           $(this).height(h_max - h_pad);
+                           $(this).height(h_max);
                      })
                      // 调整内容padding
-                     
                      $(".mtop").each(function(){
                         $(this).css({marginTop: (h_max - $(this).height())/3.5});
                      })
@@ -135,7 +174,7 @@
                 </div>
             </div>
         </div>
-        <div class="section active" id="page2">
+        <div class="section" id="page2">
             <div class="container">
                 <div class="row lmar">
                     <div class="col-sm-3 col-sm-offset-1 col-xs-4 text-center">
@@ -294,7 +333,7 @@
                         <li data-target="carousel-example" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="item height">
+                        <div class="item height active">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="row">
@@ -307,7 +346,8 @@
                                             </h3>
                                             <ul class="col-sm-10 col-xs-10 col-xs-offset-2 col-sm-offset-0 list-unstyled text-left">
                                                 <li>工作之余开始系统的学习前端</li>
-                                                <li>结合网络教程以及前端书籍，基础与实战相结合</li>
+                                                <li>结合网络教程以及前端书籍</li>
+                                                <li>基础与实战相结合</li>
                                                 <li>渐渐认识到前端的广度及深度，辞职在家专心自学</li>
                                             </ul>
                                         </div>
@@ -326,7 +366,7 @@
                                             <h3 class="text-left">工作经历
                                                 <small>2014.6～2016.1</small>
                                             </h3>
-                                            <ul class="col-sm-10 col-xs-10 col-xs-offset-2 col-sm-offset-0 list-unstyled text-left">
+                                            <ul class="col-sm-10 col-xs-10 col-xs-offset-2 col-sm-offset-0 list-unstyled text-left ">
                                                 <li>中荣印刷 担任主任助理</li>
                                                 <li>负责精细化管理，质量改进项目</li>
                                                 <li>质量改进方案的实施后，得到领导和客户一致好评</li>
@@ -337,7 +377,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="item active">
+                        <div class="item">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="row">
