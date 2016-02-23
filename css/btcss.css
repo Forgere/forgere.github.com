@@ -6938,6 +6938,12 @@ body small span{font-size: 22px;}
 }
 }
 @media screen and (max-width: 767px){
+ .carousel-control .icon-prev:before {
+  content: url(../images/left2.png);
+}
+.carousel-control .icon-next:before {
+  content: url(../images/right2.png);
+}
 .carousel-control .icon-next,
 .carousel-control .glyphicon-chevron-right {
   right: 50%;
